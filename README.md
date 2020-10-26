@@ -25,8 +25,7 @@ $ yarn dev
 - [ ] Read the Yelp API docs to see [how they implement the Yelp REST API](https://www.yelp.com/developers/documentation/v3/authentication)
 - [ ] Read this [Medium article on how this dev made an API call to Yelp](https://medium.com/@chaoyue_zhao/how-to-make-axios-api-calls-with-yelp-fusion-inside-react-js-10755d8485c5). Important note: we'll be storing the `.env` file in a different place than she will.
 - [ ] Verify the API works by using Postman or Insomnia, and then doing the following:
-  - Make a GET API to https://api.yelp.com/v3/businesses/search?location="2650 NW 5 Ave, Miami, FL 33127"&term="lunch"&radius=300
-  - Use a Bearer token. These are docs on how to use a bearer token [using the Insomnia API client](https://support.insomnia.rest/article/38-authentication) and [using Postman](https://learning.postman.com/docs/sending-requests/authorization/#bearer-token).
+  - Make a GET request to `https://api.yelp.com/v3/businesses/search?location="2650 NW 5 Ave, Miami, FL 33127"&term="lunch"&radius=300` using a Bearer token. These are docs on how to use a bearer token [using the Insomnia API client](https://support.insomnia.rest/article/38-authentication) and [using Postman](https://learning.postman.com/docs/sending-requests/authorization/#bearer-token).
     - HINT 1: Check the Yelp docs on what to pass.
     - HINT 2: Put the API Key in the request header as `Authorization: Bearer <YOUR API KEY>`. You'll want to replace that last part with the API key.
 
