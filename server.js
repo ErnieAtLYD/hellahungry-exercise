@@ -18,7 +18,7 @@ const getYelpAPI = async () => {
     'https://api.yelp.com/v3/businesses/search?location="2650 NW 5 Ave, Miami, FL 33127"&term="lunch"&radius=300',
     {
       headers: {
-        Authorization: 'Bearer ${process.env.YELP_API_KEY}'
+        Authorization: `Bearer ${process.env.YELP_API_KEY}`
       }
     }
   );
