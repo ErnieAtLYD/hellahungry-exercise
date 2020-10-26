@@ -7,24 +7,30 @@ const path = require('path');
 const app = express();
 const axios = require('axios');
 
-// Call out Yelp API
-const getYelpAPI = async () => {
-  return axios.get(
-    'https://api.yelp.com/v3/businesses/search?location="2650 NW 5 Ave, Miami, FL 33127"&term="lunch"&radius=300',
-    { headers: { Authorization: `Bearer ${process.env.YELP_API_KEY}` } }
-  );
-};
+/**
+ * Our server routes will go here.
+ */
 
-app.get('/api/yelp', async (request, response) => {
-  try {
-    const resp = await getYelpAPI();
-    response.json(resp.data.businesses);
-  } catch (e) {
-    console.log(e);
-    response.status(500).send({ error: e.message });
-  }
-});
+// - [ ] In your `/server.js`, Create a GET route called `/api/places`.
 
+// - [ ] Inside the route, use an axios call to call the API above.
+//   - If you're using promises, don't forget your catch!
+//   - If you're using async/await, don't forget to nest it in a `try/catch`!
+
+// - [ ] Modify the GET call to include the Authorization Header and add
+//       the Bearer API key.
+
+// - [ ] If you're able to make the GET request and you're using axios, use
+//       `response.json` to return the`data.businesses` property of the
+//       axios response.
+
+// - [ ] Have the `catch` return a status code of 500.
+//   - HINT: `response.status(500).send({ error: e.message });`
+
+/**
+ * For your sanity, don't edit anything below this line, or else it may
+ * mess up the way Heroku builds React pages.
+ */
 if (process.env.NODE_ENV === 'production') {
   // Serve any static files
   app.use(express.static(path.join(__dirname, 'client/build')));

@@ -11,7 +11,10 @@ const App = () => {
   useEffect(() => {
     const callOurYelpAPI = async () => {
       try {
-        const resp = await axios.get('/api/yelp');
+        // FIX ME
+        const resp = await axios.get(
+          'https://api.yelp.com/v3/businesses/search?location="2650 NW 5 Ave, Miami, FL 33127"&term="lunch"&radius=300'
+        );
         setPlaces(resp.data);
         setLoading(false);
       } catch (e) {
